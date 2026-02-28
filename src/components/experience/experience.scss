@@ -1,0 +1,70 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.sb--experience__content {
+  // This CSS follow the principles of a condensed carbon grid with 2x2
+  display: grid;
+  grid-template-areas: 'title title' 'other other' 'key-points key-points' 'image image';
+  grid-template-columns: 1f 1fr;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties -- need to control size of rows and columns */
+  grid-template-rows: auto 1fr;
+
+  @include breakpoint(md) {
+    grid-template-areas: 'title title' 'other other' 'key-points key-points' 'image image';
+  }
+
+  @include breakpoint(lg) {
+    grid-template-areas: 'title image' 'other key-points';
+  }
+}
+
+.sb--experience__title {
+  grid-area: title;
+}
+
+.sb--experience__item {
+  margin-bottom: $spacing-07;
+}
+
+.sb--experience__subtitle-date {
+  color: $text-secondary;
+  margin-right: $spacing-03;
+}
+
+.cds--list--unordered {
+  @include type-style('body-02');
+}
+
+.sb--experience__other {
+  grid-area: other;
+}
+
+.sb--experience__image-banner {
+  grid-area: image;
+  display: flex;
+  inline-size: 100%;
+
+  // 414px is the maximum height seen in the previous layout
+  max-inline-size: min(100%, 414px);
+  aspect-ratio: 1/1;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    closest-side,
+    var(--cs-brand-alt) 40%,
+    rgb(0 0 0 / 0%) 100%
+  );
+
+  @include breakpoint-between(md, lg) {
+    /* stylelint-disable-next-line carbon/layout-use  -- this reduces the height of the headed without impacting on the title */
+    margin-block-start: max(-16%, calc(-1 * #{$spacing-10}));
+  }
+}
+
+.sb--experience__logo {
+  block-size: calc(4 * #{$spacing-09});
+  filter: var(--cs-logo-filter);
+}

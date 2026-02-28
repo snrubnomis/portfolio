@@ -1,0 +1,69 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.sb--portfolio-project__content {
+  // This CSS follow the principles of a condensed carbon grid with 2x2
+  display: grid;
+  grid-template-areas: 'image1' 'image2' 'image3' 'image4' 'image5' 'description';
+  grid-template-columns: 1f 1fr;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties -- need to control size of rows and columns */
+  grid-template-rows: auto 1fr;
+
+  @include breakpoint(md) {
+    grid-template-areas: 'image1' 'image2' 'image3' 'image4' 'image5' 'description';
+  }
+
+  @include breakpoint(xlg) {
+    grid-template-areas: 'image1 image2' 'image3 image4' 'image5 .' 'description description';
+  }
+}
+
+.sb--portfolio-project__cloud-data-services {
+  margin-bottom: $spacing-10;
+}
+
+.sb--portfolio-project__description {
+  grid-area: description;
+
+  ul {
+    margin-bottom: $spacing-05;
+  }
+}
+
+.cds--list--unordered {
+  @include type-style('body-02');
+}
+
+.sb--portfolio-project__image {
+  margin: $spacing-07 0;
+}
+
+.sb--portfolio-project__image-1 {
+  grid-area: image1;
+}
+
+.sb--portfolio-project__image-2 {
+  grid-area: image2;
+}
+
+.sb--portfolio-project__image-3 {
+  grid-area: image3;
+}
+
+.sb--portfolio-project__image-4 {
+  grid-area: image4;
+}
+
+.sb--portfolio-project__image-5 {
+  grid-area: image5;
+}
+
+.sb--portfolio-project__img {
+  block-size: calc(8 * #{$spacing-09});
+}
+
+.sb--portfolio-project__img-small {
+  block-size: calc(5 * #{$spacing-09});
+}

@@ -1,0 +1,74 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.sb--about-me__content {
+  // This CSS follow the principles of a condensed carbon grid with 2x2
+  display: grid;
+  grid-template-areas: 'title title' 'other other' 'key-points key-points' 'image image';
+  grid-template-columns: 1f 1fr;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties -- need to control size of rows and columns */
+  grid-template-rows: auto 1fr;
+
+  @include breakpoint(md) {
+    grid-template-areas: 'title title' 'other other' 'key-points key-points' 'image image';
+  }
+
+  @include breakpoint(lg) {
+    grid-template-areas: 'title image' 'other key-points';
+  }
+}
+
+.sb--about-me__title {
+  grid-area: title;
+}
+
+.sb--about-me__subtitle {
+  grid-area: subtitle;
+  margin-bottom: 1rem;
+
+  ~ .sb--about-me__subtitle {
+    margin-top: 2rem;
+  }
+}
+
+.cds--list--unordered {
+  @include type-style('body-02');
+}
+
+.sb--about-me__other {
+  grid-area: other;
+}
+
+.sb--about-me__key-points {
+  grid-area: key-points;
+}
+
+.sb--about-me__image-banner {
+  grid-area: image;
+  display: flex;
+  inline-size: 100%;
+
+  // 414px is the maximum height seen in the previous layout
+  max-inline-size: min(100%, 414px);
+  aspect-ratio: 1/1;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    closest-side,
+    var(--cs-brand-alt) 40%,
+    rgb(0 0 0 / 0%) 100%
+  );
+
+  @include breakpoint-between(md, lg) {
+    /* stylelint-disable-next-line carbon/layout-use  -- this reduces the height of the headed without impacting on the title */
+    margin-block-start: max(-16%, calc(-1 * #{$spacing-10}));
+  }
+}
+
+.sb--about-me__logo {
+  block-size: calc(4 * #{$spacing-09});
+  filter: var(--cs-logo-filter);
+}

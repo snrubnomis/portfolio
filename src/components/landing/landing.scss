@@ -1,0 +1,37 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+
+.sb--landing__content {
+  // This CSS follow the principles of a condensed carbon grid with 2x2
+  display: grid;
+  grid-template-areas: 'title' 'image' 'other';
+  grid-template-columns: 1f 1fr;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties -- need to control size of rows and columns */
+  grid-template-rows: auto 1fr;
+
+  @include breakpoint(md) {
+    grid-template-areas: 'title' 'image' 'other' ;
+  }
+
+  @include breakpoint(lg) {
+    grid-template-areas: 'title image' 'other .';
+  }
+}
+
+.sb--landing__title {
+  grid-area: title;
+}
+
+.sb--landing__other {
+  grid-area: other;
+}
+
+.sb--landing__image {
+  grid-area: image;
+}
+
+.sb--landing__photo {
+  block-size: calc(12 * #{$spacing-09});
+}
