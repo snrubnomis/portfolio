@@ -61,9 +61,17 @@
 }
 
 .sb--portfolio-project__img {
-  block-size: calc(8 * #{$spacing-09});
+  block-size: calc(4 * #{$spacing-09});
+  
+  @include breakpoint(md) {
+     block-size: calc(8 * #{$spacing-09});
+  }
 }
 
 .sb--portfolio-project__img-small {
-  block-size: calc(5 * #{$spacing-09});
+  block-size: calc(3 * #{$spacing-09});
+  
+  @include breakpoint(md) {
+     block-size: calc(5 * #{$spacing-09});
+  }
 }
