@@ -29,3 +29,6 @@ dist-ssr
 
 # Tools for this template
 .lighthouseci/
+
+.vercel
+.env*.local
