@@ -7,6 +7,7 @@ export const ApiConnect = ({ title, subtitle, paragraphs, action }) => {
       <Column sm={4} md={8} lg={16}>
         <Section className="sb--portfolio-project__header__description">
           <Heading className="sb--portfolio-project__subtitle">API Connect</Heading>
+          <p>IBM API Connect is a comprehensive, hybrid, and multi-cloud API management solution that facilitates the entire API lifecycle, from creation and testing to security and management.</p>
         </Section>
         <div className="sb--portfolio-project__content">
           <div className="sb--portfolio-project__image sb--portfolio-project__image-1">

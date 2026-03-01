@@ -7,6 +7,7 @@ export const Websphere = ({ title, subtitle, paragraphs, action }) => {
         <Column sm={4} md={8} lg={16}>
           <Section className="sb--portfolio-project__header__description">
             <Heading className="sb--portfolio-project__subtitle">WebSphere Service Registry &amp; Repository</Heading>
+            <p>IBM WebSphere Service Registry and Repository (WSRR) is an enterprise-level, Java EE-based application running on WebSphere Application Server that stores, manages, and governs service metadata in Service-Oriented Architecture (SOA) environments.</p>
           </Section>
           <div className="sb--portfolio-project__content">
             <div className="sb--portfolio-project__image sb--portfolio-project__image-1">

@@ -7,6 +7,7 @@ export const CloudDataServices = ({ title, subtitle, paragraphs, action }) => {
       <Column sm={4} md={8} lg={16}>
         <Section className="sb--portfolio-project__header__description">
           <Heading className="sb--portfolio-project__subtitle">Event Streams</Heading>
+          <p>IBM Event Streams is a high-throughput, fault-tolerant event streaming platform based on Apache Kafka, designed for real-time data ingestion and message distribution between applications.</p>
         </Section>
         <div className="sb--portfolio-project__content">
           <div className="sb--portfolio-project__image sb--portfolio-project__image-1">
@@ -44,6 +45,7 @@ export const CloudDataServices = ({ title, subtitle, paragraphs, action }) => {
       <Column sm={4} md={8} lg={16}>
         <Section className="sb--portfolio-project__header__description">
           <Heading className="sb--portfolio-project__subtitle">Cloud Databases</Heading>
+          <p>IBM Cloud Databases is a managed service that provides easy access to multiple database technologies, including PostgreSQL, MongoDB, and Redis, all within IBM Cloud.</p>
         </Section>
         <div className="sb--portfolio-project__content">
           <div className="sb--portfolio-project__image">

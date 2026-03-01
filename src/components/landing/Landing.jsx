@@ -15,7 +15,7 @@ export const Landing = ({ title, subtitle, paragraphs, action }) => {
             <p>Find out about me on the <Link inline href="/aboutme">About me</Link> page.</p>
             <p>See details of my experience on the <Link inline href="/experience">Experience</Link> page.</p>
             <p>See details of specific projects by choosing one from the navigation.</p>
-            <p>While most of the code I write is confidential to IBM, I do have a few demos and side projects on GitHub.</p>
+            <p>While most of the code I write is confidential to IBM, I have a few demos and side projects on GitHub.</p>
           </div>
           <div className="sb--landing__image">
             <img

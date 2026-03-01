@@ -29,3 +29,7 @@
 .sb--page-wrapper--data {
   min-block-size: calc(8 * $spacing-10);
 }
+
+.sb--portfolio-project__header__description p {
+  margin-top: $spacing-02;
+}
