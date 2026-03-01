@@ -3,10 +3,10 @@
     { "src": "/", "dest": "/" },
     { "src": "/aboutme", "dest": "/" },
     { "src": "/experience", "dest": "/" },
-    { "src": "/projects/watsonai", "dest": "/" },
+    { "src": "/projects/watson", "dest": "/" },
     { "src": "/projects/cds", "dest": "/" },
     { "src": "/projects/apiconnect", "dest": "/" },
-    { "src": "/projects/websphere", "dest": "/" },
+    { "src": "/projects/wsrr", "dest": "/" },
     { "src": "/projects/other", "dest": "/" }
   ]
 }
